@@ -4,9 +4,6 @@ from azure.cognitiveservices.vision.computervision.models import OperationStatus
 import time
 import configparser
 
-# endpoint = "https://compvisionlab1.cognitiveservices.azure.com/"
-# key = "17dd75a7f3764b4fa6b92bd86ce12745"
-
 config = configparser.ConfigParser()
 config.read('config.ini')
 
