@@ -3,6 +3,7 @@ from analyze import read_image
 
 app = Flask(__name__, template_folder='templates')
 
+#IMAGE_API_KEY = config('IMAGE_API_KEY')
 @app.route("/")
 def home():
     return render_template('index.html')
@@ -14,7 +15,9 @@ def analysis():
     # Try to get the URI from the JSON
     try:
         get_json = request.get_json()
+        print(get_json)
         image_uri = get_json['uri']
+        print(image_uri)
     except:
         return jsonify({'error': 'Missing URI in JSON'}), 400
     
